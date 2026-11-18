@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | Seelam Beauty Parlour</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fffaf7;
+            color: #49353b;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: white;
+            padding: 20px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            border-bottom: 1px solid #f0dedb;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 23px;
+            font-weight: bold;
+            color: #b75f78;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #49353b;
+            font-size: 13px;
+            margin-left: 17px;
+            transition: 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #b75f78;
+        }
+
+        /* Welcome Section */
+        .hero {
+            min-height: 500px;
+            padding: 75px 9%;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(120deg, #fbe9e8, #fffaf7);
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .tagline {
+            color: #ad7950;
+            letter-spacing: 3px;
+            font-size: 12px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            color: #9f5068;
+            font-size: 53px;
+            line-height: 1.2;
+            margin: 20px 0;
+        }
+
+        .hero h1 span {
+            color: #bd8a58;
+        }
+
+        .hero p {
+            color: #765e64;
+            font-size: 14px;
+            line-height: 1.9;
+            margin-bottom: 25px;
+            max-width: 540px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 13px 23px;
+            margin: 5px 8px 5px 0;
+            border-radius: 30px;
+            background: #b75f78;
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #91465e;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #b75f78;
+            color: #a7556e;
+        }
+
+        .btn-outline:hover {
+            background: #b75f78;
+            color: white;
+        }
+
+        /* Highlights */
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 25px 7%;
+            background: white;
+            text-align: center;
+            border-bottom: 1px solid #f0dedb;
+        }
+
+        .highlights h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 19px;
+            color: #a7556e;
+            margin-bottom: 7px;
+        }
+
+        .highlights p {
+            font-size: 12px;
+            color: #78686b;
+        }
+
+        /* Services Preview */
+        .services {
+            max-width: 1100px;
+            margin: auto;
+            padding: 65px 25px;
+            text-align: center;
+        }
+
+        .small-heading {
+            color: #ad7950;
+            font-size: 12px;
+            letter-spacing: 3px;
+        }
+
+        .services h2 {
+            font-family: 'Playfair Display', serif;
+            color: #9f5068;
+            font-size: 35px;
+            margin: 12px 0;
+        }
+
+        .intro {
+            font-size: 13px;
+            color: #78686b;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .service-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid #f0dfdc;
+            border-radius: 13px;
+            padding: 30px 18px;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px #b75f7818;
+        }
+
+        .service-icon {
+            font-size: 36px;
+            margin-bottom: 13px;
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: #a7556e;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 13px;
+            line-height: 1.8;
+            color: #78686b;
+        }
+
+        /* Bottom Booking Section */
+        .booking-section {
+            background: #f6e3e1;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .booking-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: #9f5068;
+            font-size: 33px;
+            margin-bottom: 12px;
+        }
+
+        .booking-section p {
+            font-size: 13px;
+            color: #765e64;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+        /* Footer */
+        footer {
+            background: #49353b;
+            color: white;
+            text-align: center;
+            padding: 23px 15px;
+            font-size: 12px;
+            line-height: 2.2;
+        }
+
+        footer a {
+            color: #f4c8d1;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Design */
+        @media (max-width: 750px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero {
+                padding: 55px 7%;
+                min-height: 420px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .service-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .highlights {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .service-container {
+                grid-template-columns: 1fr;
+            }
+
+            .services h2,
+            .booking-section h2 {
+                font-size: 28px;
+            }
+
+            nav a {
+                font-size: 12px;
+                margin: 0 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation: All pages connected -->
+    <nav>
+        <div class="logo">Seelam Beauty Parlour</div>
+
+        <div>
+            <a href="Home.html" class="active">Home</a>
+            <a href="Services.html">Services</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="Booking.html">Booking</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section class="hero">
+        <div class="hero-content">
+
+            <div class="tagline">BEAUTY • CARE • CONFIDENCE</div>
+
+            <h1>
+                Welcome to<br>
+                Seelam <span>Beauty</span><br>
+                Parlour
+            </h1>
+
+            <p>
+                Discover your beauty with our special beauty care services.
+                From glowing facials and stylish haircuts to gorgeous makeup,
+                we are here to help you look and feel confident every day.
+            </p>
+
+            <a href="Booking.html" class="btn">
+                Book an Appointment
+            </a>
+
+            <a href="Services.html" class="btn btn-outline">
+                Explore Services
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="highlights">
+
+        <div>
+            <h3>Beauty & Care</h3>
+            <p>Give yourself a little extra care.</p>
+        </div>
+
+        <div>
+            <h3>Your Special Time</h3>
+            <p>Enjoy a welcoming beauty experience.</p>
+        </div>
+
+        <div>
+            <h3>Feel Beautiful</h3>
+            <p>Celebrate your natural confidence.</p>
+        </div>
+
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services">
+
+        <div class="small-heading">DISCOVER OUR SERVICES</div>
+
+        <h2>Beauty Made Special</h2>
+
+        <p class="intro">
+            Find the beauty care that makes you feel your best.
+        </p>
+
+        <div class="service-container">
+
+            <div class="service-card">
+                <div class="service-icon">🌸</div>
+                <h3>Skincare</h3>
+                <p>Facials, clean-ups and refreshing skin treatments.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💇‍♀️</div>
+                <h3>Hair Care</h3>
+                <p>Haircuts, styling and nourishing hair treatments.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💄</div>
+                <h3>Makeup</h3>
+                <p>Beautiful makeup for parties and special occasions.</p>
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <a href="Services.html" class="btn">View All Services</a>
+        <a href="Gallery.html" class="btn btn-outline">View Gallery</a>
+
+    </section>
+
+    <!-- Booking and Contact -->
+    <section class="booking-section">
+
+        <h2>Your Beauty Journey Starts Here</h2>
+
+        <p>
+            Ready for a new look? Explore our gallery or get in touch
+            with us to plan your next appointment.
+        </p>
+
+        <a href="Booking.html" class="btn">Book Now</a>
+        <a href="Contact.html" class="btn btn-outline">Contact Us</a>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 Seelam Beauty Parlour | All Rights Reserved</p>
+
+        <p>
+            <a href="Home.html">Home</a>
+            <a href="Services.html">Services</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="Booking.html">Booking</a>
+            <a href="Contact.html">Contact</a>
+        </p>
+
+    </footer>
+
+</body>
+</html>

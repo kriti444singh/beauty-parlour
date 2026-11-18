@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Seelam Beauty Parlour</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fffaf7;
+            color: #49353b;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f0dedb;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 23px;
+            font-weight: bold;
+            color: #b75f78;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #49353b;
+            margin-left: 18px;
+            font-size: 13px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #b75f78;
+        }
+
+        /* Page Heading */
+        .heading {
+            text-align: center;
+            padding: 45px 20px;
+            background: #fbe9e8;
+        }
+
+        .heading span {
+            color: #ad7950;
+            font-size: 12px;
+            letter-spacing: 3px;
+        }
+
+        .heading h1 {
+            font-family: 'Playfair Display', serif;
+            color: #9f5068;
+            font-size: 40px;
+            margin: 10px 0;
+        }
+
+        .heading p {
+            font-size: 14px;
+            color: #765e64;
+        }
+
+        /* Contact Layout */
+        .contact-container {
+            max-width: 1000px;
+            margin: 45px auto;
+            padding: 0 22px;
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 25px;
+        }
+
+        /* Contact Information */
+        .contact-info {
+            background: #f6e3e1;
+            padding: 30px;
+            border-radius: 14px;
+        }
+
+        .contact-info h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 27px;
+            color: #9f5068;
+            margin-bottom: 12px;
+        }
+
+        .contact-info > p {
+            font-size: 13px;
+            line-height: 1.9;
+            color: #765e64;
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .info-icon {
+            font-size: 22px;
+        }
+
+        .info-item h3 {
+            font-size: 14px;
+            color: #9f5068;
+            margin-bottom: 4px;
+        }
+
+        .info-item p,
+        .info-item a {
+            font-size: 12px;
+            color: #765e64;
+            text-decoration: none;
+            line-height: 1.8;
+            overflow-wrap: anywhere;
+        }
+
+        .info-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Enquiry Form */
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border: 1px solid #f0dfdc;
+            border-radius: 14px;
+            box-shadow: 0 8px 25px #b75f7810;
+        }
+
+        .contact-form h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 27px;
+            color: #9f5068;
+            margin-bottom: 8px;
+        }
+
+        .form-intro {
+            font-size: 12px;
+            color: #78686b;
+            margin-bottom: 22px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 7px;
+            font-weight: 500;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e8d5d7;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            background: #fffdfc;
+            color: #49353b;
+            outline: none;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #b75f78;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .whatsapp-btn {
+            width: 100%;
+            border: none;
+            background: #b75f78;
+            color: white;
+            padding: 13px;
+            border-radius: 25px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #91465e;
+        }
+
+        .note {
+            font-size: 11px;
+            color: #78686b;
+            text-align: center;
+            margin-top: 12px;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background: #49353b;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            font-size: 12px;
+            margin-top: 45px;
+        }
+
+        /* Mobile Design */
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 6px;
+                font-size: 12px;
+            }
+
+            .heading h1 {
+                font-size: 33px;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                margin-top: 28px;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Seelam Beauty Parlour</div>
+
+        <div>
+            <a href="Home.html">Home</a>
+            <a href="Services.html">Services</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="Booking.html">Booking</a>
+            <a href="Contact.html" class="active">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Heading -->
+    <section class="heading">
+        <span>WE WOULD LOVE TO HEAR FROM YOU</span>
+        <h1>Contact Us</h1>
+        <p>Have a question? Send us an enquiry on WhatsApp.</p>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-container">
+
+        <!-- Contact Details -->
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+
+            <p>
+                We are here to help you with our beauty services.
+                Contact us for service details, appointments or any questions.
+            </p>
+
+            <div class="info-item">
+                <div class="info-icon">📍</div>
+                <div>
+                    <h3>Our Location</h3>
+                    <p>DB Ozone building no 4 , Flat no 205, Near Dahisar Check Naka , Off western express Highway,Mira road East 401107</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">📞</div>
+                <div>
+                    <h3>Phone Number</h3>
+                    <p>9930219957</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">💬</div>
+                <div>
+                    <h3>WhatsApp</h3>
+                    <p>Send us your questions anytime.</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">🕒</div>
+                <div>
+                    <h3>Opening Hours</h3>
+                    <p>Monday – Sunday:10pm to 12am</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enquiry Form -->
+        <div class="contact-form">
+            <h2>Send an Enquiry</h2>
+
+            <p class="form-intro">
+                Fill in your details and message us directly.
+            </p>
+
+            <form id="contactForm">
+
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name"
+                           placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Your Phone Number *</label>
+                    <input type="tel" id="phone"
+                           placeholder="10-digit mobile number"
+                           inputmode="numeric"
+                           pattern="[0-9]{10}"
+                           maxlength="10" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Enquiry About *</label>
+                    <select id="subject" required>
+                        <option value="">-- Select an option --</option>
+                        <option>Service Information</option>
+                        <option>Prices and Packages</option>
+                        <option>Appointment</option>
+                        <option>Bridal Makeup</option>
+                        <option>Other Enquiry</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message *</label>
+                    <textarea id="message"
+                              placeholder="Write your question here..."
+                              required></textarea>
+                </div>
+
+                <button type="submit" class="whatsapp-btn">
+                    Send Enquiry on WhatsApp
+                </button>
+
+                <p class="note">
+                    WhatsApp will open with your message ready.
+                    Please press Send to submit your enquiry.
+                </p>
+
+            </form>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Seelam Beauty Parlour | All Rights Reserved</p>
+    </footer>
+
+    <!-- WhatsApp Script -->
+    <script>
+        document.getElementById("contactForm").addEventListener(
+            "submit", function(event) {
+
+                event.preventDefault();
+
+                const name = document.getElementById("name").value.trim();
+                const phone = document.getElementById("phone").value.trim();
+                const subject = document.getElementById("subject").value;
+                const message = document.getElementById("message").value.trim();
+
+                // Replace with your actual WhatsApp number
+                // Use country code 91 without + or spaces
+                const parlourWhatsApp = "919930219957";
+
+                const text =
+                    "Hello Seelam Beauty Parlour! I have an enquiry.%0A%0A" +
+                    "Name: " + encodeURIComponent(name) + "%0A" +
+                    "Customer Phone: " + encodeURIComponent(phone) + "%0A" +
+                    "Enquiry About: " + encodeURIComponent(subject) + "%0A" +
+                    "Message: " + encodeURIComponent(message);
+
+                const url = "https://wa.me/" + parlourWhatsApp +
+                            "?text=" + text;
+
+                window.open(url, "_blank");
+            }
+        );
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Seelam Beauty Parlour</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fffaf7;
+            color: #49353b;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f0dedb;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 23px;
+            font-weight: bold;
+            color: #b75f78;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #49353b;
+            margin-left: 18px;
+            font-size: 13px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #b75f78;
+        }
+
+        /* Introduction */
+        .intro {
+            text-align: center;
+            padding: 55px 20px 45px;
+            background: #fbe9e8;
+        }
+
+        .intro span {
+            color: #ad7950;
+            font-size: 12px;
+            letter-spacing: 3px;
+        }
+
+        .intro h1 {
+            font-family: 'Playfair Display', serif;
+            color: #9f5068;
+            font-size: 42px;
+            margin: 12px 0;
+        }
+
+        .intro p {
+            max-width: 600px;
+            margin: auto;
+            font-size: 14px;
+            line-height: 1.9;
+            color: #765e64;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 22px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 29px;
+            color: #9f5068;
+            margin-bottom: 10px;
+        }
+
+        .section-text {
+            text-align: center;
+            color: #78686b;
+            font-size: 13px;
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .photo-card {
+            background: white;
+            border: 1px solid #f0dfdc;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px #b75f7818;
+        }
+
+        /* Replace these placeholders with real photos */
+        .photo-placeholder {
+            height: 210px;
+            background: #f7e4e5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #a7556e;
+            gap: 8px;
+            text-align: center;
+        }
+
+        .photo-placeholder .icon {
+            font-size: 38px;
+        }
+
+        .photo-placeholder p {
+            font-size: 13px;
+        }
+
+        .photo-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: #a7556e;
+            text-align: center;
+            padding: 15px 10px;
+            font-size: 19px;
+        }
+
+        /* Booking Banner */
+        .booking {
+            background: #f6e3e1;
+            text-align: center;
+            padding: 38px 20px;
+            margin-top: 50px;
+        }
+
+        .booking h2 {
+            font-family: 'Playfair Display', serif;
+            color: #9f5068;
+            font-size: 29px;
+            margin-bottom: 10px;
+        }
+
+        .booking p {
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #b75f78;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background: #91465e;
+        }
+
+        /* Footer */
+        footer {
+            background: #49353b;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            font-size: 12px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 6px;
+                font-size: 12px;
+            }
+
+            .intro h1 {
+                font-size: 34px;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .photo-placeholder {
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-placeholder {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Seelam Beauty Parlour</div>
+
+        <div>
+            <a href="Home.html">Home</a>
+            <a href="Services.html">Services</a>
+            <a href="Gallery.html" class="active">Gallery</a>
+            <a href="Booking.html">Booking</a>
+            <a href=Contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Parlour Introduction -->
+    <section class="intro">
+        <span>BEAUTY • ELEGANCE • CONFIDENCE</span>
+
+        <h1>Our Beauty Gallery</h1>
+
+        <p>
+            Welcome to Seelam Beauty Parlour, your place for beauty,
+            care and relaxation. We believe every person deserves to
+            feel beautiful and confident. Explore our gallery to see
+            our beauty services and special looks.
+        </p>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="gallery-section">
+
+        <h2 class="section-title">A Glimpse of Our Work</h2>
+
+        <p class="section-text">
+            Beautiful moments, lovely styles and a little self-care.
+        </p>
+
+        <div class="gallery">
+
+          <div class="photo-card">
+    <img
+        src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800"
+        alt="Skincare and facial treatment"
+        style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;"
+    >
+    <h3>Skincare & Facial</h3>
+</div>
+            <div class="photo-card">
+    <img
+        src="https://images.unsplash.com/photo-1560869713-7d0a29430803?w=800"
+        alt="Hair styling"
+        style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;"
+    >
+    <h3>Hair Styling</h3>
+</div>
+
+            <div class="photo-card">
+    <img
+        src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800"
+        alt="Makeup look"
+        style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;"
+    >
+    <h3>Makeup Looks</h3>
+</div>
+
+            <div class="photo-card">
+    <img
+        src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800"
+        alt="Nail care and manicure"
+        style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;"
+    >
+    <h3>Nail Care</h3>
+</div>
+
+            <div class="photo-card">
+    <img
+        src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800"
+        alt="Beauty treatment"
+        style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;"
+    >
+    <h3>Beauty Treatments</h3>
+</div>
+
+            <div class="photo-card">
+    <img
+        src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800"
+        alt="Bridal makeup and beauty"
+        style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;"
+    >
+    <h3>Bridal Beauty</h3>
+</div>
+
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking">
+        <h2>Your Beauty Journey Starts Here</h2>
+        <p>Ready for your next beautiful look? Book an appointment with us.</p>
+        <a href="Booking.html" class="btn">Book an Appointment</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Seelam Beauty Parlour | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Appointment | Seelam Beauty Parlour</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fffaf7;
+            color: #49353b;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f0dedb;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 23px;
+            font-weight: bold;
+            color: #b75f78;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #49353b;
+            margin-left: 18px;
+            font-size: 13px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #b75f78;
+        }
+
+        /* Page Heading */
+        .heading {
+            text-align: center;
+            padding: 40px 20px;
+            background: #fbe9e8;
+        }
+
+        .heading span {
+            color: #ad7950;
+            font-size: 12px;
+            letter-spacing: 3px;
+        }
+
+        .heading h1 {
+            font-family: 'Playfair Display', serif;
+            color: #9f5068;
+            font-size: 40px;
+            margin: 10px 0;
+        }
+
+        .heading p {
+            font-size: 14px;
+            color: #765e64;
+        }
+
+        /* Booking Form */
+        .booking-container {
+            max-width: 650px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .booking-box {
+            background: white;
+            padding: 32px;
+            border: 1px solid #f0dfdc;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px #b75f7810;
+        }
+
+        .booking-box h2 {
+            font-family: 'Playfair Display', serif;
+            color: #a7556e;
+            font-size: 27px;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .form-intro {
+            text-align: center;
+            color: #78686b;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 7px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e8d5d7;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            color: #49353b;
+            background: #fffdfc;
+            outline: none;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #b75f78;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 85px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .whatsapp-btn {
+            width: 100%;
+            border: none;
+            background: #b75f78;
+            color: white;
+            padding: 14px;
+            border-radius: 25px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #91465e;
+        }
+
+        .note {
+            font-size: 11px;
+            color: #78686b;
+            text-align: center;
+            margin-top: 14px;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background: #49353b;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            font-size: 12px;
+            margin-top: 45px;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 6px;
+                font-size: 12px;
+            }
+
+            .heading h1 {
+                font-size: 33px;
+            }
+
+            .booking-box {
+                padding: 23px 18px;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Seelam Beauty Parlour</div>
+
+        <div>
+            <a href="Home.html">Home</a>
+            <a href="Services.html">Services</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="Booking.html" class="active">Booking</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Heading -->
+    <section class="heading">
+        <span>YOUR TIME FOR SELF-CARE</span>
+        <h1>Book an Appointment</h1>
+        <p>Choose your service and let us take care of you.</p>
+    </section>
+
+    <!-- Booking Form -->
+    <div class="booking-container">
+        <div class="booking-box">
+
+            <h2>Let's Get You Booked!</h2>
+            <p class="form-intro">
+                Please fill in your details below.
+            </p>
+
+            <form id="bookingForm">
+
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name"
+                           placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone"
+                           placeholder="Enter your phone number"
+                           pattern="[0-9]{10}" maxlength="10"
+                           inputmode="numeric" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Select Service *</label>
+                    <select id="service" required>
+                        <option value="">-- Choose a Service --</option>
+                        <option>Facial & Skincare</option>
+                        <option>Haircut & Styling</option>
+                        <option>Hair Spa</option>
+                        <option>Party Makeup</option>
+                        <option>Bridal Makeup</option>
+                        <option>Waxing</option>
+                        <option>Manicure & Pedicure</option>
+                        <option>Eyebrow & Threading</option>
+                        <option>Other Service</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Appointment Date *</label>
+                        <input type="date" id="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">Preferred Time *</label>
+                        <input type="time" id="time" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Message (Optional)</label>
+                    <textarea id="message"
+                              placeholder="Any special request?"></textarea>
+                </div>
+
+                <button type="submit" class="whatsapp-btn">
+                    Book on WhatsApp
+                </button>
+
+                <p class="note">
+                    Your booking details will open in WhatsApp.
+                    Please press Send in WhatsApp to submit your request.
+                    Your appointment is not confirmed until the parlour replies.
+                </p>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Seelam Beauty Parlour | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Set today's date as the earliest appointment date
+        const dateInput = document.getElementById("date");
+        const today = new Date();
+        const localToday = new Date(
+            today.getTime() - today.getTimezoneOffset() * 60000
+        ).toISOString().split("T")[0];
+
+        dateInput.min = localToday;
+
+        // Send booking details to WhatsApp
+        document.getElementById("bookingForm").addEventListener("submit",
+            function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById("name").value.trim();
+                const phone = document.getElementById("phone").value.trim();
+                const service = document.getElementById("service").value;
+                const date = document.getElementById("date").value;
+                const time = document.getElementById("time").value;
+                const message = document.getElementById("message").value.trim();
+
+                // CHANGE THIS to your parlour's WhatsApp number
+                // Include country code 91, without + or spaces
+                const parlourWhatsApp = "9123456890";
+
+                const text =
+                    "Hello Seelam Beauty Parlour! I would like to book an appointment.%0A%0A" +
+                    "Name: " + encodeURIComponent(name) + "%0A" +
+                    "Customer Phone: " + encodeURIComponent(phone) + "%0A" +
+                    "Service: " + encodeURIComponent(service) + "%0A" +
+                    "Date: " + encodeURIComponent(date) + "%0A" +
+                    "Time: " + encodeURIComponent(time) + "%0A" +
+                    "Additional Message: " + encodeURIComponent(message || "None");
+
+                const url = "https://wa.me/" + parlourWhatsApp +
+                            "?text=" + text;
+
+                window.open(url, "_blank");
+            }
+        );
+    </script>
+
+</body>
+</html>
